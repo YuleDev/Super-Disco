@@ -6,6 +6,9 @@ var arrTime = ["9", "10", "11", "12", "13", "14", "15", "16", "17"]
 const d = new Date();
 var currentTime = d.getHours();
 
+const date = new Date();
+document.getElementById("currentDay").textContent = date;
+
 console.log(d.getHours());
 
 for (let i = 0; i < arrTime.length; i++) {
@@ -32,11 +35,15 @@ for (let i = 0; i < arrTime.length; i++) {
 
 function saveToLocal() {
     console.log("I have been clicked: ", this)
-    var valueToAdd = this.previousElementSibling.children[0].value;
-    var keyOfValue = this.previousElementSibling.previousElementSibling.children[0].textContent;
+    var valueToAdd = this.previousElementSibling.value;
+    var keyOfValue = this.previousElementSibling.previousElementSibling.innerHTML;
 
     localStorage.setItem(keyOfValue, valueToAdd)
 };
+
+function getFromLocal() {
+    /* bullshit goes here */
+}
 
 //setting up the buttons to perform a save on click
 for(i=0; i< arrBtns.length; i++) {
@@ -45,3 +52,5 @@ for(i=0; i< arrBtns.length; i++) {
 
 /* then need to create buttons that save the text content of that hour to the localstore
 when the page is refreshed the local storage would then remember the changes made to that hour*/
+
+/* keyOfValue,  */

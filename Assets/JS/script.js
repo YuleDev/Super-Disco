@@ -34,7 +34,6 @@ for (let i = 0; i < arrTime.length; i++) {
 };
 
 function saveToLocal() {
-    console.log("I have been clicked: ", this)
     var valueToAdd = this.previousElementSibling.value;
     var keyOfValue = this.previousElementSibling.previousElementSibling.innerHTML;
 
@@ -42,8 +41,10 @@ function saveToLocal() {
 };
 
 function getFromLocal() {
-    /* bullshit goes here */
-}
+    localStorage.getItem(keyOfValue, valueToAdd);
+    return(valueToAdd);
+    /* keyOfValue.innerHTML +=(valueToAdd); */
+};
 
 //setting up the buttons to perform a save on click
 for(i=0; i< arrBtns.length; i++) {

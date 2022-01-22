@@ -1,27 +1,50 @@
 var description = document.querySelector("#description");
 var timeAllot = document.querySelector("#hour");
 
+var arrBtns = document.querySelectorAll(".saveBtn")
 
-description.appendChild(tex)
+var arrTime = [9, 10, 11, 12, 13, 14, 15, 16, 17]
+
+// description.appendChild(tex)
 
 const d = new Date();
-d.getHours();
+var currenTime = d.getHours();
 
 console.log(d.getHours());
 
-for (let i = 0; i < array.length; i++) {
-    const element = array[index];
+
+
+for (let i = 0; i < arrTime.length; i++) {
+    // const element = array[index];
     
-    if ((d.getHours) > timeAllot) {
-        /* turn textarea green */
+    if (currenTime > arrTime[i]) {
+        /* turn textarea gray */
+        // document.getElementById(arrTime[i]).setAttribute("class", "textarea past")
+        console.log("past")
     }
-    if ((d.getHours) === timeAllot) {
+    if (currenTime == arrTime[i]) {
+        console.log("present")
         /* turn textarea red */
     }
-    if ((d.getHours) < timeAllot) {
-        /* turn textarea gray */
+    if (currenTime < arrTime[i]) {
+        console.log("future")
+        /* turn textarea green */
     }
 };
+
+function saveToLocal() {
+    console.log("I have been clicked: ", this)
+    var valueToAdd = this.previousElementSibling.children[0].value;
+    var keyOfValue = this.previousElementSibling.previousElementSibling.children[0].textContent;
+
+    localStorage.setItem(keyOfValue, valueToAdd)
+}
+
+
+//setting up the buttons to perform a save on click
+for(i=0; i< arrBtns.length; i++) {
+    arrBtns[i].addEventListener("click", saveToLocal)
+}
 
 
 

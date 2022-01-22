@@ -5,10 +5,10 @@ var arrBtns = document.querySelectorAll(".saveBtn")
 
 var arrTime = [9, 10, 11, 12, 13, 14, 15, 16, 17]
 
-// description.appendChild(tex)
+// description.appendChild(text)
 
 const d = new Date();
-var currenTime = d.getHours();
+var currentTime = d.getHours();
 
 console.log(d.getHours());
 
@@ -17,18 +17,17 @@ console.log(d.getHours());
 for (let i = 0; i < arrTime.length; i++) {
     // const element = array[index];
     
-    if (currenTime > arrTime[i]) {
-        /* turn textarea gray */
-        // document.getElementById(arrTime[i]).setAttribute("class", "textarea past")
-        console.log("past")
+    if (currentTime > arrTime[i]) {
+        /* /* turn textarea gray */
+        document.getElementById(arrTime[i]).classList.add("past");
     }
-    if (currenTime == arrTime[i]) {
-        console.log("present")
+    if (currentTime == arrTime[i]) {
         /* turn textarea red */
+        document.getElementById(arrTime[i]).setAttribute("class", "textarea present");
     }
-    if (currenTime < arrTime[i]) {
-        console.log("future")
+    if (currentTime < arrTime[i]) {
         /* turn textarea green */
+        document.getElementById(arrTime[i]).setAttribute("class", "textarea future")
     }
 };
 

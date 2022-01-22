@@ -41,9 +41,9 @@ function saveToLocal() {
 };
 
 function getFromLocal() {
-    localStorage.getItem(keyOfValue, valueToAdd);
-    return(valueToAdd);
-    /* keyOfValue.innerHTML +=(valueToAdd); */
+    var storageItem =  localStorage.getItem(keyOfValue);
+    document.getElementById(keyOfValue).innerHTML = valueToAdd;
+
 };
 
 //setting up the buttons to perform a save on click

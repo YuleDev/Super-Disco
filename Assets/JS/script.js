@@ -40,18 +40,15 @@ function saveToLocal() {
     localStorage.setItem(keyOfValue, valueToAdd)
 };
 
-function getFromLocal() {
-    var storageItem =  localStorage.getItem(keyOfValue);
-    document.getElementById(keyOfValue).innerHTML.textContent = valueToAdd;
 
+/* Retrieving data from localstorage for refresh purposes */
+let textareas = document.getElementsByClassName("col-8");
+
+for(let i = 0; i < textareas.length; i++) {
+    textareas[i].value = localStorage.getItem(textareas[i].previousElementSibling.innerHTML)
 };
 
 //setting up the buttons to perform a save on click
 for(i=0; i< arrBtns.length; i++) {
     arrBtns[i].addEventListener("click", saveToLocal)
 };
-
-/* then need to create buttons that save the text content of that hour to the localstore
-when the page is refreshed the local storage would then remember the changes made to that hour*/
-
-/* keyOfValue,  */

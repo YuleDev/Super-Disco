@@ -3,9 +3,7 @@ var timeAllot = document.querySelector("#hour");
 
 var arrBtns = document.querySelectorAll(".saveBtn")
 
-var arrTime = [9, 10, 11, 12, 13, 14, 15, 16, 17]
-
-// description.appendChild(text)
+var arrTime = ["9", "10", "11", "12", "13", "14", "15", "16", "17"]
 
 const d = new Date();
 var currentTime = d.getHours();
@@ -13,23 +11,31 @@ var currentTime = d.getHours();
 console.log(d.getHours());
 
 
-
 for (let i = 0; i < arrTime.length; i++) {
     // const element = array[index];
     
+    /* turn textarea gray */
     if (currentTime > arrTime[i]) {
-        /* /* turn textarea gray */
         document.getElementById(arrTime[i]).classList.add("past");
+        document.getElementById(arrTime[i]).classList.remove("present");
+        document.getElementById(arrTime[i]).classList.remove("future");
     }
+    /* turn textarea red */
     if (currentTime == arrTime[i]) {
-        /* turn textarea red */
-        document.getElementById(arrTime[i]).setAttribute("class", "textarea present");
+        document.getElementById(arrTime[i]).classList.add("present");
+        document.getElementById(arrTime[i]).classList.remove("past");
+        document.getElementById(arrTime[i]).classList.remove("future");
     }
+    /* turn textarea green */
     if (currentTime < arrTime[i]) {
-        /* turn textarea green */
-        document.getElementById(arrTime[i]).setAttribute("class", "textarea future")
+        document.getElementById(arrTime[i]).classList.add("future");
+        document.getElementById(arrTime[i]).classList.remove("past");
+        document.getElementById(arrTime[i]).classList.remove("present");
     }
 };
+
+/* setAttribute("class", "textarea present"); */
+/* setAttribute("class", "textarea future") */
 
 function saveToLocal() {
     console.log("I have been clicked: ", this)
@@ -39,6 +45,7 @@ function saveToLocal() {
     localStorage.setItem(keyOfValue, valueToAdd)
 }
 
+/* ${arrTime[0]} */
 
 //setting up the buttons to perform a save on click
 for(i=0; i< arrBtns.length; i++) {

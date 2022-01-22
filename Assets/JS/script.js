@@ -42,7 +42,7 @@ function saveToLocal() {
 
 function getFromLocal() {
     var storageItem =  localStorage.getItem(keyOfValue);
-    document.getElementById(keyOfValue).innerHTML = valueToAdd;
+    document.getElementById(keyOfValue).innerHTML.textContent = valueToAdd;
 
 };
 

@@ -1,4 +1,4 @@
-This is a work day schedule app. Currently in progress.
+This is a work day schedule app.
 
 https://github.com/BullMooseDev/Super-Disco/
 

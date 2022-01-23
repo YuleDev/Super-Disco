@@ -68,15 +68,25 @@
         <textarea class="col-8" placeholder="Enter your work to-do here" id="16"></textarea>
         <button class="saveBtn col-2"><i class="bi bi-check2-circle fa-lg"></i>save</button>
       </div>
+
+      <!-- secret below -->
+
       <div class="row">
-        <p class="col-2 hour">5PM</p>
+        <input id="secret-checkbox" type="checkbox" />
+        <label for="secret" id="secret" class="col-2 hour">5PM</label>
         <textarea class="col-8" placeholder="Enter your work to-do here" id="17"></textarea>
         <button class="saveBtn col-2"><i class="bi bi-check2-circle fa-lg"></i>save</button>
       </div>
     </div>
+
+    <!-- secret above -->
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <script src="./Assets/JS/script.js"></script>
   </body>
 </html>
+
+<!--
+  This p-tag existed where im trying to insert the secret
+  <p class="col-2 hour" id="secret">5PM</p> -->

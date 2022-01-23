@@ -69,3 +69,27 @@ textarea{
   font-size: 40px;
   transition: all .3s ease-in-out;
 }
+
+#secret {
+position: relative;
+}
+
+#secret-checkbox { 
+display: none;
+}
+
+#secret-checkbox:checked + #secret:after {
+  content: "Follow this link for a poster of my favorite film!", url("../secret/secret.html");
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: white;
+}
+
+#backimage {
+  background-image: url(../images/RioBravo.jpg);
+  background-repeat: no-repeat;
+  background-size: auto;
+}

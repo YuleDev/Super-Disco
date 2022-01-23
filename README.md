@@ -1,6 +1,6 @@
 This is a work day schedule app. Currently in progress.
 
-https://github.com/BullMooseDev/Super-Disco/tree/main/Develop
+https://github.com/BullMooseDev/Super-Disco/
 
 https://bullmoosedev.github.io/Super-Disco/
 

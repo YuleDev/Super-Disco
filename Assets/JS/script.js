@@ -7,6 +7,7 @@ let date = new Date();
 var currentTime = date.getHours();
 dateDisplay = document.getElementById("currentDay").textContent = date;
 
+
 /* figure out setinterval to have time update? */
 
 for (let i = 0; i < arrTime.length; i++) {
@@ -54,10 +55,11 @@ for(i=0; i< arrBtns.length; i++) {
 /* Adding a secret message */
 var secret = document.querySelector("#secret");
 var secretAnchor = document.createElement("a");
-secretAnchor.href="./Assets/secret/secret.html";
+secretAnchor.href="Assets/secret/secret.html";
 secretAnchor.innerHTML = " Wow! a secret!";
 
 showSecret = function() {
     secret.appendChild(secretAnchor);
 };
+
 secret.addEventListener("click", showSecret);

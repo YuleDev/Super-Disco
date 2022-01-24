@@ -1,7 +1,7 @@
 var description = document.querySelector("#description");
 var timeAllot = document.querySelector("#hour");
-var arrBtns = document.querySelectorAll(".saveBtn")
-var arrTime = ["9", "10", "11", "12", "13", "14", "15", "16", "17"]
+var arrBtns = document.querySelectorAll(".saveBtn");
+var arrTime = ["9", "10", "11", "12", "13", "14", "15", "16", "17"];
 
 const d = new Date();
 var currentTime = d.getHours();
@@ -36,7 +36,7 @@ for (let i = 0; i < arrTime.length; i++) {
 function saveToLocal() {
     var valueToAdd = this.previousElementSibling.value;
     var keyOfValue = this.previousElementSibling.previousElementSibling.innerHTML;
-
+    
     localStorage.setItem(keyOfValue, valueToAdd)
 };
 
@@ -52,3 +52,14 @@ for(let i = 0; i < textareas.length; i++) {
 for(i=0; i< arrBtns.length; i++) {
     arrBtns[i].addEventListener("click", saveToLocal)
 };
+
+/* Adding a secret message */
+var secret = document.querySelector("#secret");
+var secretAnchor = document.createElement("a");
+secretAnchor.href="../../assets/secret/secret.html";
+secretAnchor.innerHTML = " Wow! a secret!";
+
+showSecret = function() {
+    secret.appendChild(secretAnchor);
+};
+secret.addEventListener("click", showSecret);

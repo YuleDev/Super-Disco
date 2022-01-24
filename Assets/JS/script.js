@@ -2,13 +2,16 @@ var description = document.querySelector("#description");
 var timeAllot = document.querySelector("#hour");
 var arrBtns = document.querySelectorAll(".saveBtn");
 var arrTime = ["9", "10", "11", "12", "13", "14", "15", "16", "17"];
-
 let date = new Date();
 var currentTime = date.getHours();
+
+
+function myTimer() {
+let date = new Date();
 dateDisplay = document.getElementById("currentDay").textContent = date;
+};
 
-
-/* figure out setinterval to have time update? */
+setInterval(myTimer, 0);
 
 for (let i = 0; i < arrTime.length; i++) {
     

@@ -56,7 +56,7 @@ for(i=0; i< arrBtns.length; i++) {
 /* Adding a secret message */
 var secret = document.querySelector("#secret");
 var secretAnchor = document.createElement("a");
-secretAnchor.href="../../assets/secret/secret.html";
+secretAnchor.href="../../Assets/secret/secret.html";
 secretAnchor.innerHTML = " Wow! a secret!";
 
 showSecret = function() {

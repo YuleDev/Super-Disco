@@ -9,7 +9,7 @@ var currentTime = d.getHours();
 const date = new Date();
 document.getElementById("currentDay").textContent = date;
 
-console.log(d.getHours());
+/* figure out setinterval to have time update? */
 
 for (let i = 0; i < arrTime.length; i++) {
     

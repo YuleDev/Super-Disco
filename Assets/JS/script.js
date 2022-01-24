@@ -3,11 +3,9 @@ var timeAllot = document.querySelector("#hour");
 var arrBtns = document.querySelectorAll(".saveBtn");
 var arrTime = ["9", "10", "11", "12", "13", "14", "15", "16", "17"];
 
-const d = new Date();
-var currentTime = d.getHours();
-
-const date = new Date();
-document.getElementById("currentDay").textContent = date;
+let date = new Date();
+var currentTime = date.getHours();
+dateDisplay = document.getElementById("currentDay").textContent = date;
 
 /* figure out setinterval to have time update? */
 
@@ -56,7 +54,7 @@ for(i=0; i< arrBtns.length; i++) {
 /* Adding a secret message */
 var secret = document.querySelector("#secret");
 var secretAnchor = document.createElement("a");
-secretAnchor.href="../../Assets/secret/secret.html";
+secretAnchor.href="./Assets/secret/secret.html";
 secretAnchor.innerHTML = " Wow! a secret!";
 
 showSecret = function() {
